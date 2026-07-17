@@ -1,1 +1,410 @@
+This File include four module where:-
+Module-1: Types of Neural networks
+Module-2: Tranformer
+Module-3:LLM
+Module-4:Code generation,Code refactoring,Debugging.
+
+
+
+---------------------------------------------
+Module-1(Types of neural networks)
+---------------------------------------------
+Neural Networks (NN)
+│
+├── 1. Feedforward Neural Networks
+│   │
+│   ├── Perceptron
+│   ├── Multi-Layer Perceptron (MLP)
+│   ├── Deep Neural Network (DNN)
+│   └── Radial Basis Function Network (RBFN)
+│
+├── 2. Convolution-Based Networks
+│   │
+│   ├── CNN (Convolutional Neural Network)
+│   ├── LeNet
+│   ├── AlexNet
+│   ├── VGG
+│   ├── ResNet
+│   ├── DenseNet
+│   ├── EfficientNet
+│   └── Capsule Network (CapsNet)
+│
+├── 3. Recurrent Neural Networks(important to see)
+│   │
+│   ├── RNN
+│   ├── LSTM
+│   ├── GRU
+│   ├── Bidirectional RNN
+│   ├── Bidirectional LSTM
+│   └── Echo State Network (ESN)
+│
+├── 4. Transformer-Based Networks(Important to see)
+│   │
+│   ├── Transformer
+│   ├── BERT
+│   ├── GPT
+│   ├── T5
+│   ├── RoBERTa
+│   ├── XLNet
+│   └── Vision Transformer (ViT)
+│
+├── 5. Generative Neural Networks
+│   │
+│   ├── Autoencoder
+│   │   ├── Sparse Autoencoder
+│   │   ├── Denoising Autoencoder
+│   │   └── Variational Autoencoder (VAE)
+│   │
+│   ├── GAN
+│   │   ├── DCGAN
+│   │   ├── CycleGAN
+│   │   ├── StyleGAN
+│   │   └── Conditional GAN
+│   │
+│   └── Diffusion Models
+│
+├── 6. Graph Neural Networks
+│   │
+│   ├── GNN
+│   ├── GCN (Graph Convolution Network)
+│   ├── GraphSAGE
+│   ├── GAT (Graph Attention Network)
+│   └── Graph Transformer
+│
+├── 7. Similarity Learning Networks
+│   │
+│   ├── Siamese Network
+│   ├── Triplet Network
+│   └── Matching Network
+│
+├── 8. Self-Organizing Networks
+│   │
+│   ├── Self-Organizing Map (SOM)
+│   └── Neural Gas Network
+│
+├── 9. Memory-Based Networks
+│   │
+│   ├── Hopfield Network
+│   ├── Modern Hopfield Network
+│   └── Associative Memory Network
+│
+├── 10. Probabilistic Networks
+│   │
+│   ├── Boltzmann Machine
+│   ├── Restricted Boltzmann Machine (RBM)
+│   └── Deep Belief Network (DBN)
+│
+├── 11. Recursive Networks
+│   │
+│   ├── Recursive Neural Network
+│   └── Tree Recursive Network
+│
+├── 12. Spiking Neural Networks
+│   │
+│   ├── SNN
+│   ├── Liquid State Machine
+│   └── Neuromorphic Networks
+│
+└── 13. Reinforcement Learning Networks
+    │
+    ├── Deep Q Network (DQN)
+    ├── Double DQN
+    ├── Actor-Critic
+    ├── A3C
+    ├── PPO
+    └── Deep Deterministic Policy Gradient (DDPG)
+
+
+ANN (Artificial Neural Network) is the general category of neural networks.
+MLP, CNN, RNN, LSTM, GRU, GAN, Transformer, and GNN are all specialized types of ANN.
+
+Neural Network
+      │
+      ▼
+Artificial Neural Network (ANN)
+      │
+      ├── Feedforward NN
+      │      ├── Perceptron
+      │      └── MLP
+      │
+      ├── CNN
+      ├── RNN
+      ├── LSTM
+      ├── GRU
+      ├── Transformer
+      ├── GAN
+      └── GNN
+
+
+
+---------------------------------------------------------------------------
+Module-2 Transformer
+---------------------------------------------------------------------------
+To understand the transformer archecture , we must understand the RNN, LSTM:
+
+Transformer:- A Transformer is a deep learning architecture introduced in 2017 
+that uses Self-Attention to process data in parallel instead of sequentially like RNNs and LSTMs.
+
+Why Transformer needed:-
+RNN (Recurrent neural network):-
+-> Squential processing.
+-> Slow training.
+-> Poor-Long-range memory.
+-> vanishing gradients.
+
+eg:-" The cat, which was sitting on the sofa for many hours , suddenly jumped."
+-> The AI may forgot that who jumpped from sofa.
+
+LSTM (Long Short-Term Memory):-
+->LSTM improved memory using gates.
+Advantages:- Better long-term memory.
+Problems:- 
+->Still Sequential.
+->Difficult to parallellise.
+->slow for large datasets.
+
+Transformer architure:
+It revolutionized Natural Language Processing (NLP) by replacing RNNs and 
+LSTMs with an Attention Mechanism that processes all words simultaneously.
+
+Applications:-
+->ChatGPT
+->Microsoft Copilot
+->GPT Models
+
+
+Word1 ↔ Word2 ↔ Word3 ↔ Word4
+
+Benefits:-
+->Parallel processing
+->Faster training
+->Better context understanding
+->Long-range dependency learning.
+
+
+Transformer.
+│
+├── Input Embedding.
+├── Positional Encoding.
+├── Encoder.
+│     ├── Multi-Head Attention
+│     ├── Feed Forward Network
+│     └── Layer Normalization
+│
+├── Decoder.
+│     ├── Masked Attention
+│     ├── Encoder-Decoder Attention
+│     └── Feed Forward Network
+│
+└── Softmax Output.
+
+["I", "love", "Artificial", "Intelligence"].
+
+
+RNN/LSTM                                    Transformer
+->Processes data sequentially	                Processes data in parallel.
+->Uses hidden states and memory cells	        Uses Self-Attention.
+->Slow training                         	    Faster training.
+->Struggles with long dependencies	          Handles long dependencies well.
+
+
+1.Why is Positional Encoding needed in Transformer?(Assignment).
+
+
+
+------------------------------------------------------------------------
+Module-3 (LLM)
+------------------------------------------------------------------------
+LLM(Definition):-
+A large language model(LLM) is an AI model trained on massive amount of text 
+data to understand,generate,summerize,transalte,and answer questions in human language.
+
+Artificial Intelligence (AI)
+          │
+          ▼
+Machine Learning (ML)
+          │
+          ▼
+Deep Learning (DL)
+          │
+          ▼
+Neural Networks
+          │
+          ▼
+Transformer
+          │
+          ▼
+Large Language Models (LLMs)
+
+
+
+
+LLM Use case Summary:-
+LLM (Large Language Model)
+│
+├── 1. Content Generation
+│   ├── Blog Writing
+│   ├── Article Creation
+│   ├── Email Drafting
+│   └── Marketing Content
+│
+├── 2. Conversational AI
+│   ├── Chatbots
+│   ├── Virtual Assistants
+│   ├── Customer Support
+│   └── Copilots
+│
+├── 3. Software Development
+│   ├── Code Generation
+│   ├── Code Review
+│   ├── Bug Fixing
+│   └── Documentation
+│
+├── 4. NLP Tasks
+│   ├── Translation
+│   ├── Text Summarization
+│   ├── Sentiment Analysis
+│   └── Question Answering
+│
+├── 5. Business Applications
+│   ├── Report Generation
+│   ├── Meeting Summarization
+│   ├── Knowledge Management
+│   └── Process Automation
+│
+├── 6. Education
+│   ├── Personalized Tutoring
+│   ├── Exam Preparation
+│   ├── Content Explanation
+│   └── Question Generation
+│
+├── 7. Healthcare
+│   ├── Medical Documentation
+│   ├── Clinical Summaries
+│   ├── Medical Q&A
+│   └── Research Assistance
+│
+├── 8. Finance
+│   ├── Financial Analysis
+│   ├── Risk Assessment
+│   ├── Fraud Detection Support
+│   └── Report Drafting
+│
+├── 9. Legal
+│   ├── Contract Analysis
+│   ├── Legal Research
+│   ├── Document Summarization
+│   └── Compliance Assistance
+│
+└── 10. Multimodal AI
+    ├── Text + Image Understanding
+    ├── OCR & Document Processing
+    ├── Image Description
+    └── Voice Assistants
+
+LLM
+│
+├── Training Data
+├── Tokenizer
+├── Embeddings
+├── Transformer
+│     ├── Attention
+│     ├── Multi-Head Attention
+│     ├── Feed Forward Network
+│     └── Positional Encoding
+├── Training Process
+├── Fine-Tuning
+└── Inference.
+
+
+a.)Tokenization:-Tokenization is the process of breaking text into smaller units called tokens.
+eg:- I love AI
+ becomes: ["I", "love", "AI"]
+b.)Embeddings:- embeddings are the numerical representation of data in a high dimensional vector space.
+ eg:- AI → [0.25, 0.78, 0.47].
+      Machine → [0.33, 0.67, 0.58].
+c.)Transformer:-
+Input
+  │
+  ▼
+Self Attention
+  │
+  ▼
+Feed Forward Network
+  │
+  ▼
+Output
+
+Examples:
+GPT → Decoder Only
+BERT → Encoder Only
+T5 → Encoder + Decoder
+
+d.)Training in AI
+step 1.) collect the data(books, wesite etc.)
+step 2.) Pretraining(Model learns patterns by predicting missing or next words.)
+example: I love______
+   model predicts:- I love AI.
+
+e.) Token Prediction:
+      Input:
+      The sky is
+
+      Predictions:
+      blue → 80%
+      green → 5%
+      red → 2%
+f.) Fine-tuning
+  After pretraining, model is specialized.
+example:-
+Medical Data
+     │
+     ▼
+Medical Assistant
+
+
+Pretrained Model
+       │
+       ▼
+Fine-Tuning
+       │
+       ▼
+Domain Expert Model
+g.) Inference phase:Inference means actual usage.
+User Question
+      │
+      ▼
+Tokenizer
+      │
+      ▼
+Transformer
+      │
+      ▼
+Token Prediction
+      │
+      ▼
+Response
+
+
+
+------------------------------------------------------------------------------
+Module-4 (code generation, code refactoring, Dubbing)
+------------------------------------------------------------------------------
+Code generation:-Generating source code from natural language instructions.
+                eg:- Create a python function to check whether a number is prime.
+
+
+Code Refactoring:-Improving the structire ,readability,maintainability,
+                 or performance of code without changing its functionality.
+->cleaner code 
+->Easier maintainance 
+->fewer bugs
+-> Better performance
+
+Debugging:- Finding and fixing error(bugs) in code.
+
+   Buggycode:-
+numbers=[1,2,3]
+print(number[5])
+
 
