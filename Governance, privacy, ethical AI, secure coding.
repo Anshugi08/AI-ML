@@ -1,1 +1,173 @@
+(This is last module of AI Concepts)
+These file contains 4 module:-
+MODULE-1:-GOVERNANCE
+MODULE-2:-PRIVACY
+MODULE-3:-ETHICAL AI 
+MODULE-4:-SECURE CODING
+============================================================================================================================================
+MODULE-1:- GOVERNANCE
+============================================================================================================================================
+Governance:- Governance is the process of definig rules, policies,responsibility and controls
+            to ensure system operate safely,legally and effectively.
+
+Governance = Rules + Monitering +Accountability
+
+Benefits:-
+-> System follow company policies.
+-> Laws and regulations are obyed.
+-> Risks are controlled. 
+-> People are accountable.
+
+Why Governance is important:-
+-> Ensures compliance with laws and regulations
+-> Reduce risks
+-> Improves accountability
+-> Protects company assests
+-> Maintains customer trust.
+
+
+Components of Governance:-
+->Policies:-Policies define organizational rules.
+->Standards:-Standard define specific requirement.
+->Procedures:- step-by-step guidelines.
+->Controls:- Mechanisms used to enforce policies.
+
+Government in software development:-
+Types of IT Governance:-
+-> Data Governance:- Management od data quality, security, and availability.
+->Security Governance:- Defines security responsibilities and controls.
+-> AI Governance:- Ensures AI system are fair,transparent,traceable.
+
+Important Governance Frameworks:
+-> COBIT- Control Objectives for Information and related technologies.
+Used for:-
+-> IT governance
+-> Risk management
+
+-> ISO 27001:- International standard for information Security Management.
+Used for:
+-> Security Controls
+-> Risk management
+
+====================================================================================================================================================
+MODULE-5 PRIVACY
+====================================================================================================================================================
+
+Privacy:- Privacy is the right of individuals to control how their personal information
+          is collected, used, stored and shared.
+
+Personal data Examples:-
+-> Name
+-> Email
+-> Phone number
+-> Address
+
+Privacy Principles
+1.) Data Minimization:-Collect only neccessary.
+Bad Example:
+Asking date of birth when not required.
+Good Example:
+Collecting only email for newsletter subscription.
+
+2.) Purpose Limitation:-Use data only for the purpose specified.
+Example:
+Email collected for login cannot be used for marketing without consent.
+
+3.)Consent:-Users must agree before data collection.
+Example:- Cookie consent banners.\
+
+4.) Transparency:-
+Organisations must clearly explain:
+->What data is collected.
+->Why it is collected.
+->How it will be used.
+
+5.) Data Retention:-
+Keep data only as long as necessary.
+Example: Delete inactive user records after a defined period.
+
+
+=========================================================================================
+Module-3:Ethical AI
+=========================================================================================
+Ethical AI:-
+Ethical AI refers to designing,devolping and deploying AI System 
+resposible so they respect human rights and societal values.
+
+Why Ehical Ai required:-
+
+
+Core Principle of Ethical AI:
+1.) Failrness:- Ai should treat all people equally.
+   eg: Suppose an AI Hiring system favours men over women because 
+       historial hiring data was biased.
+2.) Transparency:- Users should understand how Ai makes decisions.
+  eg:-Banks expalins why a loan application is rejected.
+3.) Accountability:- Someone must be responsible for AI decisions.
+ eg:-A company must investigate harmful AI outcomes.
+4.) Reliability and safety:- AI should work consistently and safely.
+ eg:-Self-driving cars must be throughly tested.
+5.)Privacy and Security:-AI must protect user data.
+ eg:- chatbots should not expose confidential chats.
+6.)Human Oversight:- Human should remain invloved in important decisions.
+eg:- Doctors review AI-generated diagnoses before treatment.
+
+
+AI Bias:-Bias occurs when AI produces unfair outcomes.
+
+Causes
+Biased Data
+Example:- An AI model trained mostly on one demographic group.
+
+Biased Design
+Example:- Developers fair to consider diverse user groups.
+
+
+Real-Life Ethical AI Challenges
+Recruitment Systems
+
+===================================================================================================================================================
+MODULE-4 SECURE CODING
+===================================================================================================================================================
+Secure Coding:-Secure coding means writing software in ways that prevent attackers 
+               from exploiting vulnerabilities.
+            -> Security should be incorporated from the beginning of development.
+Doubt Sections:-
++------------------------------------------------------------------+
+| Common Security Threats:-                                        |
+|                                                                  |
+| 1.) SQL Injection:-                                              |
+| Vulnerable Example:-                                             |
+| SELECT * FROM users                                              |
+| WHERE username = 'userInput';                                    |
+|                                                                  |
+| Attackers enters:-                                               |
+| OR 1=1--                                                         |
+| This may expose all records.                                     |
+|                                                                  |
+| 2.) Secure Approach:-                                            |
+| PreparedStatement stmt =                                         |
+| con.prepareStatement(                                            |
+| "SELECT * FROM users WHERE username=?");                         |
+|                                                                  |
+| 3.) Cross-Site Scripting (XSS)                                   |
+| Attacker injects malicious JavaScript.                           |
+| Example:- <script>alert('hacked')</script>                       |
+|                                                                  |
+| 4.) Cross-Site Request Forgery (CSRF)                            |
+| Example:- User is logged into banking website.                   |
++------------------------------------------------------------------+
+
+Malicious site tricks browser into sending unauthorized.
+
+Secure coding best practices:-
+Never trust user input.
+Example:-
+Validate:
+->Length
+->Format
+->Data Type
+
+
+
 
